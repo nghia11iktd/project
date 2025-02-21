@@ -1,0 +1,224 @@
+ctrl +d: trỏ vào các chữ giống nhau
+alt + w : thẻ p
+so sanh code :https://www.diffchecker.com/text-compare/
+gõ lorem để sinh ra sô từ
+ctrl +d : để con trỏ sử lí khi cac từ giống nhau trên nhiều dongff
+br or br/ : de xuong dong (aaaaaa <br/>)
+hr : sinh ra ke ngang <hr>
+b or strong: in dam 
+i or em: in nghieng
+b và i ko mang ngũ nghĩa còn strong và em mang ngũ nghĩa
+u : gach chan
+ul : danh sach ko co thứ tự - list-style : none  sẽ bỏ hết dấu chấm
+ol : danh sach co thư thứ tụ
+li : thẻ con trực tiếp của ul , ol
+phím tắt:  https://docs.emmet.io/cheat-sheet/
+(ul oror ol)>li*5{item $}: sẽ ra item tu 1 tơi 5
+ol reversed : đảo ngươc lại thứ tự 
+ol type ="": danh dau dau dong la 1 kí tự 
+<a href="link muốn đến" target="_blank"> Đi đến trang B </a>
+chú ý: _blank se nhảy sang tab mới còn _self sẽ dùng luôn tap đấy
+<a href = "tel:số điện thoại ">goi cho anh nhe</a> -->goi dien
+<a href = "mailto:gamil">email</a> ->>> email
+<img src ="link hình ảnh cần hiển thi" alt = "Hinh anh " width = "cao" height="rong">
+alt : hiển thị text , hỗ trợ đọc màn hình , công cụ tìm kiếm
+bỏ 1 chiều đi thì chiều còn lại sẽ tự căn tỉ lệ thì sẽ tránh đc việc hình ảnh bị méo mó
+chiều = số hoặc số%
+
+@Truy cập đường dẫn
+tương đối :
+    ./ chỉ nhìn thấy đc thư muc ngang nó hoặc sau
+    ../ lùi về 1 cấp(có thể ../../ để lùi lại 2 cấp )
+tuyệt đôi:
+    đường dẫn tuyệt đối dùng dấu /
+Chú ý:Khi thay đổi vị trí của project thì đường dẫn tuyệt đối vẫn truy cập đc còn tương đối thì không
+
+html entities list : kí tự đặc biệt(có thể dùng khi định dã mã nguồn)
+<pre :giữ nguyên định dạng trong văn bản 
+codebeauty: dùng để định dang mã nguồn trong web
+thư viện đẻ hai lai code: https://prismjs.com/
+
+Sử dụng thẻ table:
+tr: đại diện cho 1 hàng 
+td : đại diện cho 1 ô dữ liệu 
+th : Định nghĩa 1 ô tiêu đề trong bảng
+tối ưu hóa bố cục bảng:
+    Colspan : chỉ định chiếm bao nhiêu cột
+    Rowspan : chỉ định chiếm bao nhiêu hàng
+    
+----------------------------------------------------------------------------------------------------------------------------------
+css
+inline:  <h1 style="color: aqua;">dit me m </h1> chỉ sử lí đc 1 dong
+internal: dùng trong <style : đặt trong thẻ head
+vd:
+<style>
+      h1,h2{
+        color: rgb(16, 155, 155);
+        font-style: italic;
+      }
+    </style>
+external: tao rieng 11 file 
+  <link rel="stylesheet" href="style.css"> : carl kick voo style để tạo file mới
+Inline ->internal and external (2 cái sau thăng viết sau sẽ mạnh hơn)
+
+font-style : kieu chữ 
+font-family: font chữ
+text-transform : chuyển hoa thường 
+text-align: căn giữa 
+font-size: cỡ chữ
+opacity : độ trong suốt của phần tử : vẫn copy đc 
+background-image : url(link ảnh ): ảnh nền web -dung trong body hoặc selector 
+display = none : ấn khỏi phẩn tử trong gia diện và xóa khỏi vị trí
+visibility : hidden :  ẩn (ko tương tác đc )
+visibility : hidden : hiện 
+input:checked ~{} : câu lệnh CSS này sẽ áp dụng các kiểu (style) cho tất cả các thẻ <img> nằm trong cùng một cấp với thẻ <input> đã được chọn (checked)
+img {}: chon thẻ img
+
+hiển thị Favicon:
+link tao :https://www.favicon-generator.org/
+copy đoạn mã rồi sửa đường link ở đoạn href và chỗ content
+ctrl+h để sửa đc nhiều dòng 1 lúc 
+
+tăng cường tính tương thích đá trình duyệt Prefix
+  link tự thêm khi gõ 1 số đoan code :https://autoprefixer.github.io/
+  Caniuse.com : trang web hỗ trợ kiểm tra css có thần thêm prefix;
+
+CSS Selector cơ bản(đánh dấu các phần tử cơ bản)
+  id = "...": khi muốn đặt 1 cái id nào đó để tí nữa sửa css #id thôi và các thẻ phải khác id
+  web check lỗi hợp lệ:https://validator.w3.org/
+  class = "...": do ko thể sử dụng lại tên id trong th muốn khia báo lặp dùng class
+  để gọi class dung .ten-class còn id thì dùng #
+  chú ý : cứ class có nhiều cái trên 1 thẻ cứ cách 1 cái 
+
+Combinator selectors
+*{}: chọn tất cả các thee trong body
+elemen.class{} : chẽn chọn tất cả các thẻ elemen có class là class
+néu .class{} : thì nó sẽ các thể có tên class
+bộ chọn kết hợp
+div,p{}:chọn tất cả các thẻ div,p
+class.class: chọn tất cả các thẻ có 2 class như trc 
+cha con{}: sẽ tác đọng vào các thẻ con (space)
+cha > con{}: sẽ tác đọng vào con trực tiếp  
+div + p : chọn ngay phần tử p đầu tiên sát ngay sau div
+div ~ ul : chọn tất cả các thẻ ul lắm ngay sau div
+doi vs the a:
+  [href]: chỉ tác đọng lên thẻ có thuộc tính là href ở thẻ mở
+  [target="_blank" ] : chỉ tác đọng đến the a có cái này 
+  [title ~= "pic"] : chỉ tất tác động đến cảc thẻ có thuộc tính title = "pic" (pic phải là 1 từ rieng lẻ ) 
+  [title *="pic"] : chọn tất cả các thuộc tính title chứa chuỗi pic (chỉ cần là chuỗi con)
+  [title|="pic"] : chọn tất cả cac thuộc tính title có từ duy nhất bắt đầu = pic , pic-123 ,...(sau pic phải có dấu - khi có đầu chuỗi)
+  [title|^"pic"] : chọn tất cả title bắt đầu bằng từ pic ko quan tâm đến cái đằng sau 
+  [title$="1"] : chọ tất cả các thẻ có thuộc tính title kết thúc = 1
+
+Pseudo-classes 
+  :hover : chọn các thẻ p khi di chuột qua 
+  :active : chọn các thẻ a khi nhấn dữ chuột
+  :link : chọn các thẻ a có liên kết chưa kích vào
+  :visited : chọn các thẻ a liên kiết đã kick vô truy cập
+  :empty : chọn các thẻ div  không có nội dung 
+  :target : chọn thẻ có id là home khi tren url có hash tương ứng  Vd: #home:target
+  kiến thức mới thẻ a khi cho đia chỉ id của thẻ khác vào phân lik thì khi kioch vào nó sẽ chuyển xuống phần mk kick vd như thân bài ,...
+  thẻ con p đầu tiên :
+    :first-child : chọn các thẻ p là thẻ con đầu tiên 
+    :last-child : chọn các thẻ p là thẻ con cuối cùng ->> có thẻ chọn bất kì 
+    :nth-child(2) : chọn các thẻ p là thẻ con từ thứ 2 xuống ->> có thẻ chọn bất kì 
+    :nth-last-chill(2) : thẻ con thứ 2 tính từ dưới lên 
+    :only-child : chọn các thẻ p  là thẻ con duy nhất
+    :nth-child(odd) : nhảy theo n lẻ
+    :tnt-child(even) : nhay theo n lẻ
+    :nth-child(n): nhảy theo n mong muốn
+  thẻ con p xuất hiện đầu tiên:
+    :fist-of-type : chọn thẻ con p xuất hiện đầu tiên trong thẻ cha 
+    :last-of-type : chọn thẻ p xuất hiện cuối cùng trong thẻ cha 
+    :nth-of-type(n) :chọn các thẻ p xuất hiện thứ n trong thẻ cha
+    :nth-last-of-type(n) : chọn các thẻ p xuất hiện thứ n tính từ cuối lên 
+    odd,even,n: nhảy theo mong muốn nth-of-type
+    :only-of-type : chọn thẻ p xuất hiện duy nhất trong thẻ cha
+
+ Pseudo-classes not(selector) và quy tắc thứ tự ưu tiên Tăng cường kiểm soát CSS của bạn
+  :not(selector) ví dụ : .top:not(p) : chọn tất cả các thẻ có class = "top" trừ thẻ p
+  ví dụ tiếp .top:not(:fist-of-type) : chọn tất cả các thẻ có class = "top" trừ thẻ xuất hiện đầu tiên (thay trong ngoặc = mấy cái ở trên ý nghĩa tương tự)
+  thứ tự ưu tiên khi áp dụng khi có nhiều thuộc tính tác động đên 1 phần tử
+    1 !important
+    2 inline style(viết trên code html) 
+    3 id(#) selector 
+    4 class(.) hoặc pseudo-class(:) selector
+    5 elemen selector (h,p,li,div,...)
+    6 universal selector (*) : bộ chọn chung 
+
+Box model Hướng dẫn chi tiết về thuộc tính padding
+kích thươc 1 ptu = border + padding + content
+  width : 100px
+  height : 100px
+  color : pink
+  background-color: red
+  padding: 20px khoảng đệm
+1 số thuộc tính để xét cho từng cạnh thêm khoảng đệm :
++padding-left: trái 
++padding-top : trên 
++padding-bottom : dưới 
++padding-right : phải 
+--> cách để gọp 4 cái trên :
+          padding :apx bpx cpx dpx : sẽ tự căn thêm khoảng đệm theo trên phải trái dưới
+          padding :apx : cả 4 hương 
+          padding :apx bpx: trenduoi phaitrai
+          padding :apx bpx cpx : trên phảitrai dưới
+border: 10px viền 
+các viền:
+  solid : viền nét liền
+  dashed : đường nét đứt 
+  Dotted : đường chấm dot
+  double : 2 đường song song kề nhau 
+  groove : đường 3D
+  inset : viền 3D
+  outset : viền 3D
+các property khác khi muốn vẽ từng cạnh :
+  border-top : viền trên
+  border-bottom :viền dưới
+  border-right :viền phải
+  border-left : viền trái 
+sét chiều rộng giống quy tắc padding đã học
+  border-width: apx bpx cpx dpx;
+  border-style : solid
+  border-color : blu
+có thể dùng cách này:
+  border-width: apx bpx cpx dpx;
+  border-style : solid dashed double DDotted
+  border-color : blu pink black violet
+bo góc :
+  border-top-left-radius: apx : bo góc trên bên trai
+  border-top-right-radius: apx : bo góc trên bên phải 
+  border-bottom-right-radius: apx : bo góc dưới bên phải
+  border-bottom-left-radius: apx : bo góc dưới trái
+hoặc dùng :
+  border-radius: apx : cả 4 hương 
+  border-radius: apx bpx : (trên trái dưới phải) + (trên phải dưới trái)
+  border-radius: apx bpx cpx dpx : (trên trái) + (trên phải + dưới trái ) + (dưới phải)
+  border-radius: apx bpx cpx dpx : (trên trái) + (trên phải) + (dưới phải) + (dưới trái)
+
+margin : sử dụng để xác định khoảng cách giữa các phần tử trên trang 
+    margin :apx : cả 4 hương 
+    margin :apx bpx: (trên dưới) + (trái phải)
+    margin :apx bpx cpx : (trên) + (trái phải) + (dưới)
+    margin:apx bpx cpx dpx : kim đồng hồ xuôi
+    ngoài ra có thể dùng 
+      margin-top: apx
+      margin-left: apx
+      margin-right: apx
+      margin-bottom: apx
+    
+ text-align: center : căn lề giữa
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

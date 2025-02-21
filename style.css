@@ -1,0 +1,19 @@
+body{
+    background-color:plum;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+}
+.check p{
+    font-size: 24px;
+    line-height: 1;
+}
+.check image{
+    max-width: 600px;
+}
+.check{
+    margin: 0 auto;
+    width: 700px;
+    text-align: center;
+}
